@@ -47,6 +47,7 @@
     background-color: rgb(53, 88, 18);
     padding: 10px;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .form__result {
