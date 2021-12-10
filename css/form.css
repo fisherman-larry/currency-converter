@@ -1,65 +1,58 @@
-.form__fieldset {
-    padding: 30px;
-    margin: auto;
-    background-color: rgb(204, 204, 204);
-    border-radius: 20px;
-    border-style: groove;
-    border-color: rgb(224, 129, 50);
-    border-width: 7px;
-}
-
 .form__labelText {
-    width: 150px;
+    width: 100%;
+    max-width: 200px;
     display: inline-block;
-    font-weight: bold;
-}
-
-.form__fieldsetLegend {
-    background-color: rgb(224, 129, 50);
-    border-style: double;
-    border-color: rgb(204, 125, 6);
-    border-radius: 50px;
-    padding: 5px;
-    margin: auto;
-
-}
-
-.form__fieldsetLabel {
-    padding: 20px;
-    text-align: center;
+    margin-right: 5px;
 }
 
 .form__field {
-    background-color: rgb(212, 145, 19);
+    border: 1px solid #ccc;
     padding: 10px;
     width: 100%;
     max-width: 400px;
-
+    border-radius: 5px;
 }
 
 .form__field:hover {
-    background-color: rgba(95, 95, 95, 0.63);
+    background-color: hsl(0, 0%, 93%);
 }
 
 .form__button {
-    margin-top: 20px;
-    background-color: rgb(224, 129, 50);
-    border-style: groove;
-    border-color: rgb(224, 129, 50);
-    border-radius: 20px;
-    padding: 5px;
-    float: right
+    margin-top: 5px;
+    width: 100%;
+    border: none;
+    background-color: rgb(53, 88, 18);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .form__button:hover {
-    background-color: rgba(255, 255, 255, 0.521);
-    cursor: pointer;
+    background-color: hsl(90, 66%, 30%);
+}
+
+.form__button:active {
+    background-color: hsl(90, 66%, 35%);
+}
+
+.form__fieldset {
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.form__fieldsetLegend {
+    background-color: rgb(53, 88, 18);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .form__result {
-    padding: 5px;
-    color: rgb(224, 129, 50);
-    font-weight: bold;
-    margin-top: 7px;
-
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
 }

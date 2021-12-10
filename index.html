@@ -17,6 +17,7 @@
     <link href="css/body.css" rel="stylesheet">
     <link href="css/container.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <script defer src="js/script.js"></script>
 
@@ -33,24 +34,29 @@
                 <legend class="form__fieldsetLegend">Kalkulator walut</legend>
                 <p>
                     <label class="form__fieldsetLabel">
-                        <span class="form__labelText"> EUR: </span>
-                        <input class="form__field js-sum" name="sum" required type="number" value="0" step="0.01">
+                        <span class="form__labelText"> Wpisz kwotę w PLN*: </span>
+                        <input placeholder="Wpisz kwotę w zł" class="form__field js-amount" name="amount" required step="0.01" type="number">
                     </label>
                 </p>
                 <p>
                     <label class="form__fieldsetLabel">
-                        <span class="form__labelText"> PLN(wpisz aktualny kurs): </span>
-                        <input class="form__field js-exchangeRate" name="exchange rate" required type="number"
-                            value="4.71" step="0.01">
+                        <span class="form__labelText"> Waluta: </span>
+                        <select class="form__field js-currency" name="currency">
+                            <option value="EUR"> Euro </option>
+                            <option value="USD"> Dolar Amerykański </option>
+                            <option value="GBP"> Funt Brytyjski </option>
+                        </select>
                     </label>
                 </p>
             </fieldset>
 
             <button class="form__button">Przelicz</button>
 
-            <p class="form__result">
-                Kwota: <strong class="js-result"> 0 </strong> PLN
-            </p>
+            <div class="form__result">
+                <p class="form__result--text">
+                    Kwota: <strong class="js-result"> 0 </strong>
+                </p>
+            </div>
 
         </form>
     </div>
