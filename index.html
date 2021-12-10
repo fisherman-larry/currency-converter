@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&family=Roboto+Mono:ital,wght@0,400;0,500;1,300;1,400&family=Spartan:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="css/body.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+
+    <script defer src="js/script.js"></script>
+
+    <title>Kalkulator walut</title>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+        <form class="form js-form">
+            <fieldset class="form__fieldset">
+                <legend class="form__fieldsetLegend">Kalkulator walut</legend>
+                <p>
+                    <label class="form__fieldsetLabel">
+                        <span class="form__labelText"> EUR: </span>
+                        <input class="form__field js-sum" name="sum" required type="number" value="0" step="0.01">
+                    </label>
+                </p>
+                <p>
+                    <label class="form__fieldsetLabel">
+                        <span class="form__labelText"> PLN(wpisz aktualny kurs): </span>
+                        <input class="form__field js-exchangeRate" name="exchange rate" required type="number"
+                            value="4.71" step="0.01">
+                    </label>
+                </p>
+            </fieldset>
+
+            <button class="form__button">Przelicz</button>
+
+            <p class="form__result">
+                Kwota: <strong class="js-result"> 0 </strong> PLN
+            </p>
+
+        </form>
+    </div>
+</body>
+
+</html>
