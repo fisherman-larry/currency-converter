@@ -1,34 +1,44 @@
-let amountElement = document.querySelector(".js-amount");
-let currencyElement = document.querySelector(".js-currency");
-let resultElement = document.querySelector(".js-result");
-let formElement = document.querySelector(".js-form");
+{
+    const welcome = () => {
+        console.log("Welcome developer on my currency converter site!! :)")
+    };
 
-let rateEUR = 4.62;
-let rateGBP = 5.40;
-let rateUSD = 4.09;
+    const calculateResult = (amount, currency) => {
+        const rateEUR = 4.62;
+        const rateGBP = 5.40;
+        const rateUSD = 4.09;
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+        switch (currency) {
+            case "EUR":
+                return amount / rateEUR;
 
-    let amount = +amountElement.value;
-    let currency = currencyElement.value;
+            case "GBP":
+                return amount / rateGBP;
 
-    let result;
+            case "USD":
+                return amount / rateUSD;
+        }
+    };
+    const init = () => {
+        welcome();
 
-    switch (currency) {
-        case "EUR":
-            result = amount / rateEUR;
-            break;
+        const formElement = document.querySelector(".js-form");
 
-        case "GBP":
-            result = amount / rateGBP;
-            break;
+        formElement.addEventListener("submit", (event) => {
+            event.preventDefault();
 
-        case "USD":
-            result = amount / rateUSD;
-            break;
-    }
-  resultElement.innerHTML = `${amount.toFixed(2)} PLN = <strong>${result.toFixed(2)} ${currency} </strong>`;
-});
+            const amountElement = document.querySelector(".js-amount");
+            const currencyElement = document.querySelector(".js-currency");
+            const resultElement = document.querySelector(".js-result");
 
+            const amount = +amountElement.value;
+            const currency = currencyElement.value;
 
+            const result = calculateResult(amount, currency);
+
+            resultElement.innerHTML = `${amount.toFixed(2)} PLN = <strong>${result.toFixed(2)} ${currency} </strong>`;
+        });
+    };
+    init();
+
+}
