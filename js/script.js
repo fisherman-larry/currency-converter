@@ -19,6 +19,7 @@
                 return amount / rateUSD;
         }
     };
+    
     const init = () => {
         welcome();
 
@@ -40,5 +41,4 @@
         });
     };
     init();
-
 }
